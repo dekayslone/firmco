@@ -1,0 +1,304 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    padding: 100px 0;
+}
+
+.aboutheader-text {
+    text-align: left;
+    margin-left: 500px; 
+    padding-right: 30px; 
+}
+
+.aboutheader-text > p {
+    text-align: left; 
+    padding-right: 30px;
+    margin-left: 300px; 
+}
+
+.brand-image {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+    height: 500px;
+}
+
+
+
+.loan-process {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+.step img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.faqs {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #C7030F;
+}
+
+.faq-item p {
+    color: #666;
+}
+
+/* General reset for box-sizing to make layout more predictable */
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile-first styles (for devices up to 768px width) */
+@media (max-width: 768px) {
+
+    /* Adjusting hero section for mobile view */
+    .hero {
+        display: block;
+        padding: 50px 20px; /* Less padding for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    /* Center the text and reduce margins for smaller screens */
+    .aboutheader-text {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        text-align: center; /* Center text on mobile */
+    }
+
+    /* Adjust the image dimensions in the hero section */
+    .brand-image img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px; /* Limit maximum width */
+        margin: 0 auto; /* Center image */
+    }
+
+    /* Navigation adjustments */
+    .nav ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack the navigation links vertically */
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin-bottom: 10px; /* Add space between links */
+    }
+
+    /* Footer adjustment for mobile */
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Center the CTA button */
+    .cta {
+        display: block;
+        text-align: center;
+        margin: 20px auto; /* Center the button */
+    }
+
+    /* Social media icons adjustments */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .social-icons a {
+        margin: 0 10px; /* Add space between icons */
+        font-size: 24px; /* Larger icon size for touch targets */
+    }
+
+    /* Adjust the footer text for smaller screens */
+    .footer p {
+        font-size: 14px; /* Smaller font for better readability on mobile */
+        margin: 10px 0;
+    }
+}
+/* Hide the hamburger menu by default and set the nav for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile Menu (Hidden by default) */
+.nav-links.mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.mobile.show {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    /* Hamburger shows up on smaller screens */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide the navigation links for mobile and make the hamburger trigger it */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 100px; /* adjust based on your header */
+        left: 0;
+        height: auto;
+        z-index: 999;
+    }
+
+    /* When the hamburger is clicked, show the menu */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Register button centered in mobile */
+    .cta {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+/* General Button Styles */
+.cta {
+    display: inline-block;
+    background-color: #C7030F; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 15px 30px; /* Initial padding */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Default font size */
+    transition: transform 0.2s, background-color 0.2s ease-in-out; /* Smooth scaling and color change on hover */
+    position: fixed; /* Keep the button fixed on the page */
+    right: 10px; /* Position it to the right */
+    bottom: 30px; /* Position it at the bottom */
+}
+
+/* Button hover effect */
+.cta:hover {
+    background-color: #A6020E; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    .cta {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 10px 20px; /* Reduce padding */
+        right: 5px; /* Adjust position */
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        font-size: 0.8rem; /* Further reduce font size */
+        padding: 8px 16px; /* Adjust padding */
+        right: 3px; /* Adjust position */
+        bottom: 15px;
+    }
+}
+
+/* Register Now button for mobile */
+@media (max-width: 768px) {
+    .cta {
+        font-size: 12px;  /* Reduce font size */
+        padding: 10px 15px;  /* Adjust padding */
+        right: 10px;  /* Position adjustment */
+        top: 20px;
+    }
+}
+/* Adjust grid for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;  /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .aboutheader-text {
+        margin-left: 10px;
+        padding-right: 10px;
+        text-align: center; /* Center align the text */
+    }
+
+    .brand-image {
+        width: 100%;  /* Make the image responsive */
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 14px;  /* Reduce paragraph font size */
+        line-height: 1.5;
+        padding: 0 15px;  /* Reduce padding */
+    }
+
+    h1, h2 {
+        font-size: 20px;  /* Reduce header font size */
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px;  /* Smaller font for footer */
+        padding: 10px;    /* Adjust padding */
+    }
+}
+

@@ -1,0 +1,76 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    padding: 100px 0;
+}
+
+.aboutheader-text {
+    text-align: left;
+    margin-left: 500px; 
+    padding-right: 30px; 
+}
+
+.aboutheader-text > p {
+    text-align: left; 
+    padding-right: 30px;
+    margin-left: 300px; 
+}
+
+.brand-image {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+    height: 500px;
+}
+
+
+
+.loan-process {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+.step img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.faqs {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #C7030F;
+}
+
+.faq-item p {
+    color: #666;
+}

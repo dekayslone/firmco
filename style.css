@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: DM Sans, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-family: DM Sans, sans-serif;
+}
+
+p {
+    color: #666;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #C7030F;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #fff;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-text {
+    margin-top: 50px;
+    flex: 1;
+    text-align: left;
+    line-height: 90px;
+}
+.hero-text > h1 {
+    font-size: 100px;
+    color: #C7030F;
+}
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.6; 
+    word-break: break-word;
+    margin-top: 15PX;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+.hero-image img {
+    max-width: 55%;
+    height: auto;
+    margin-left: 670px;
+    margin-top: -600px
+    
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-text, .about-image {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+    
+}
+
+.about-text {
+    flex: 1;
+    transform: translateX(-50px);
+    word-break: break-word; 
+    width: 400px;
+}
+.about > h2 {
+    color:#C7030F
+}
+
+.about-image {
+    transform: translateX(50px);
+    max-width: 90%;  
+    height: 450px; 
+    width: 450px;
+    margin-top: -50px;
+    overflow: inherit;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.why-choose {
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #fff;  
+}
+.why-choose-content {
+    flex: 1;
+    transform: translateX(-50px);
+    word-break: break-word; 
+    width: 400px;
+    margin-left: 400px;
+    margin-top: -30px;
+}
+.why-choose h2 {
+    color: #C7030F;
+    margin-left: 75px;
+}
+.choose-image {
+    transform: translateX(50px);
+    max-width: 90%;  
+    height: 450px; 
+    width: 450px;
+    margin-top: -50px;
+    overflow: inherit;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 700px;
+    margin-top: -450px;
+    border-radius: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero, .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
